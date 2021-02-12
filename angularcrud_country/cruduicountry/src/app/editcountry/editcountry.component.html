@@ -1,0 +1,24 @@
+<div class="container">
+  <h2>Modify Country Details</h2>
+  <form #modifycountryform="ngForm" (ngSubmit)="modifyCountryFormSubmit()">
+    <div class="form-group">
+      <label for="id">Id</label>
+      <input type="text" class="form-control" required [(ngModel)]="country.id" name="id" disabled>
+    </div>
+    <div class="form-group">
+      <label for="Country Name">Country Name</label> <input type="text" class="form-control" required
+      [(ngModel)]="country.countryname" name="countryname">
+    </div>
+    <div class="form-group">
+      <label for="id">Country Code</label>
+      <input type="text" class="form-control" required [(ngModel)]="country.countrycode" name="countrycode">
+    </div>
+    <div class="form-group">
+      <label for="id">Capital City</label>
+      <input type="text" class="form-control" required [(ngModel)]="country.countrycapitalcity" name="countrycapitalcity">
+    </div>
+    <button type="submit" class="btn btn-success">Modify</button>&nbsp;
+    <button type="button" class="btn btn-primary" (click)="goToCountryList()">Back</button>
+  </form>
+</div>
+

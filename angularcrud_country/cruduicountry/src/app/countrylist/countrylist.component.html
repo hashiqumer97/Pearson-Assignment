@@ -1,0 +1,28 @@
+<div class="container">
+  <h2>List of Countries</h2>
+  <br>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th style="text-align: center;">Country ID</th>
+        <th style="text-align: center;">Country Name</th>
+        <th style="text-align: center;">Country Code</th>
+        <th style="text-align: center;">Capital City</th>
+        <th style="text-align: center;">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let country of countryList">
+        <td style="text-align: center;">{{country.id}}</td>
+        <td style="text-align: center;">{{country.countryname}}</td>
+        <td style="text-align: center;">{{country.countrycode}}</td>
+        <td style="text-align: center;">{{country.countrycapitalcity}}</td>
+        <td style="text-align: center;">
+          <button type="button" class="btn btn-primary" (click)="goToModifyCountry(country.id)">Modify Country</button>&nbsp;
+          <button type="button" class="btn btn-danger" (click)="deleteCountry(country.id)">Delete Country</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <button type="button" class="btn btn-success" (click)="goToAddCountry()">Add New Country</button>
+</div>
